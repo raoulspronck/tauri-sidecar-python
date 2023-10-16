@@ -10,7 +10,7 @@ fn main() {
   .setup(|_app| {
     tauri::async_runtime::spawn(async move {
       let (mut rx, _child) = Command::new_sidecar("main")
-        .expect("failed to setup `app` sidecar")
+        .expect("failed to setup `main` sidecar")
         .spawn()
         .expect("Failed to spawn packaged node");
 
